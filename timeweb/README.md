@@ -22,7 +22,7 @@
 Официальные инструкции Timeweb:
 - создание БД: https://timeweb.com/ru/docs/virtualnyj-hosting/bazy-dannyh/sozdanie-bazy-dannyh/
 - подключение к БД: https://timeweb.com/ru/docs/virtualnyj-hosting/bazy-dannyh/podklyuchenie-k-baze-dannyh/
-- загрузку в `public_html`: https://timeweb.com/ru/docs/virtualnyj-hosting/cms/ustanovka-cms/
+- загрузка в `public_html`: https://timeweb.com/ru/docs/virtualnyj-hosting/cms/ustanovka-cms/
 - технический домен: https://timeweb.com/ru/docs/virtualnyj-hosting/perenos-sajtov-na-hosting/perenos-pri-pomoshchi-terminala/
 
 ## Что работает
