@@ -68,7 +68,6 @@ final class Database
                 created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
                 FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
             )');
-            $pdo->exec('CREATE INDEX IF NOT EXISTS saved_calculations_user_created ON saved_calculations (user_id, created_at)');
         } else {
             $pdo->exec('CREATE TABLE IF NOT EXISTS users (
                 id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
