@@ -118,7 +118,7 @@ export default function Home() {
         <section className="intro-grid appear">
           <div>
             <div className="section-label"><span>01</span> ПУЛЬТ УПРАВЛЕНИЯ ЦЕНОЙ</div>
-            <h1>Сколько купят<br /><em>по вашей цене?</em></h1>
+            <h1>Сколько билетов купят<br /><em>по вашей цене?</em></h1>
           </div>
           <div className="intro-copy">
             <p>Выберите рейс и измените цену. Сервис пересчитает спрос по девяти вероятностным сценариям и покажет, где продажи упрутся в вместимость самолёта.</p>
@@ -213,7 +213,10 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="result-footer">
-                  <div className="economics"><span>Ожидаемая выручка <strong>{money.format(result.expectedRevenue)}</strong></span><span>Маржинальная прибыль <strong>{money.format(result.expectedProfit)}</strong></span></div>
+                  <div className="economics" aria-label="Финансовый прогноз">
+                    <div className="economic-card revenue-card"><span>Ожидаемая выручка</span><strong>{money.format(result.expectedRevenue)}</strong><small>по медианному сценарию</small></div>
+                    <div className="economic-card profit-card"><span>Маржинальная прибыль</span><strong>{money.format(result.expectedProfit)}</strong><small>с учётом стоимости перевозки</small></div>
+                  </div>
                   {isAuthenticated ? (
                     <Button variant="outline" className="save-button" disabled={saveMutation.isPending} onClick={() => submitted && saveMutation.mutate(submitted)}><Save size={16} />{saveMutation.isPending ? "Сохраняем…" : "Сохранить расчёт"}</Button>
                   ) : (
